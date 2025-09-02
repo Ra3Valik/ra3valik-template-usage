@@ -4,6 +4,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -12,12 +15,10 @@ jobs:
 
       - name: Build zip
         run: |
-          cd ..
-          zip -r ra3valik-template-usage-${GITHUB_REF_NAME}.zip ra3valik-template-usage
+          zip -r "ra3valik-template-usage-${{ github.ref_name }}.zip" "ra3valik-template-usage"
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.ref_name }}
           files: ra3valik-template-usage-${{ github.ref_name }}.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
