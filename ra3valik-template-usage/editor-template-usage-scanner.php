@@ -6,7 +6,7 @@
  * option to set the unused-title prefix.
  * Author: Ra3Valik
  * Author URI: https://github.com/Ra3Valik
- * Version: 1.1.2
+ * Version: 1.2.1
  * Update URI: https://github.com/Ra3Valik/ra3valik-template-usage
  */
 
