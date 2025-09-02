@@ -6,7 +6,7 @@
  * option to set the unused-title prefix.
  * Author: Ra3Valik
  * Author URI: https://github.com/Ra3Valik
- * Version: 1.1.0
+ * Version: 1.1.1
  * Update URI: https://github.com/Ra3Valik/ra3valik-template-usage
  */
 
@@ -18,11 +18,9 @@ $ra3valik_puc = PucFactory::buildUpdateChecker(
 	'ra3valik-template-usage'                                // plugin slug (= folder name)
 );
 
-// Если публикуете релизы с ZIP-активом (как в вашем workflow) — включите:
 $ra3valik_puc->getVcsApi()->enableReleaseAssets();
 
-// Если основная ветка не master:
-$ra3valik_puc->setBranch('main');
+$ra3valik_puc->setBranch('master');
 
 if ( !defined( 'ABSPATH' ) ) {
 	exit;
