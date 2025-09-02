@@ -13,9 +13,9 @@
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $ra3valik_puc = PucFactory::buildUpdateChecker(
-	'https://github.com/Ra3Valik/ra3valik-template-usage/',     // repo URL
-	__FILE__,                                                      // main plugin file
-	'ra3valik-template-usage'                                         // plugin slug (= folder name)
+	'https://github.com/Ra3Valik/ra3valik-template-usage/',
+	__FILE__,
+	'ra3valik-template-usage'
 );
 
 $ra3valik_puc->getVcsApi()->enableReleaseAssets();
