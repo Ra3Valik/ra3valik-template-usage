@@ -2,7 +2,7 @@ name: Build & Release
 on:
   push:
     tags:
-      - 'v*'   # сработает на v1.3.0, v1.3.1 и т.п.
+      - 'v*'
 
 jobs:
   release:
@@ -10,13 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Сформируем ZIP из папки плагина
       - name: Build zip
         run: |
-          cd ra3valik-template-usage
-          zip -r ../ra3valik-template-usage-${GITHUB_REF_NAME}.zip .
+          cd ..
+          zip -r ra3valik-template-usage-${GITHUB_REF_NAME}.zip ra3valik-template-usage
 
-      # Создаём релиз и прикрепляем ZIP
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:

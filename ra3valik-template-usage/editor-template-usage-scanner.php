@@ -6,14 +6,14 @@
  * option to set the unused-title prefix.
  * Author: Ra3Valik
  * Author URI: https://github.com/Ra3Valik
- * Version: 1.0.0
- * Update URI: https://github.com/ra3valik/ra3valik-template-usage
+ * Version: 1.1.0
+ * Update URI: https://github.com/Ra3Valik/ra3valik-template-usage
  */
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $ra3valik_puc = PucFactory::buildUpdateChecker(
-	'https://github.com/ra3valik/ra3valik-template-usage/', // repo URL
+	'https://github.com/Ra3Valik/ra3valik-template-usage/', // repo URL
 	__FILE__,                                                // main plugin file
 	'ra3valik-template-usage'                                // plugin slug (= folder name)
 );
